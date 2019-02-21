@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::get('mail', 'MailController@send');
 
 Route::get('carbon', 'CarbonController@index');
+
+Route::get('hello', function(){
+    if(Request::has('lang')){
+        App::setLocale(Request::get('lang'));
+    }
+    return view('hello');
+});
