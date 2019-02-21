@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('mail', 'MailController@send');
+
+Route::get('carbon', 'CarbonController@index');
