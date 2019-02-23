@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh-TW',
 
     /*
     |--------------------------------------------------------------------------
@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Arcanedev\NoCaptcha\NoCaptchaServiceProvider::class,
+
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -224,6 +229,19 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Laravel Debugbar
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        //'Captcha' => Arcanedev\NoCaptcha\Facades\NoCaptcha::class,
+
+        // 若要使用比較習慣的中繼標籤的話可以自己選擇
+        'SEOMeta' => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph'=> Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter' => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // 或是標配的facade
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
 ];
